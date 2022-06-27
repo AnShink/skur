@@ -1,0 +1,105 @@
+body{
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+.card {
+    max-width: 360px;
+    max-height: 641px;
+    box-shadow: 0 7px 14px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    position: relative;
+    z-index: 5;
+    &::before{
+        content: 'New';
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        z-index: 115;
+        display: table-cell;
+        // width: 52px;
+        // height: 40px;
+        padding: 7px 10px;
+        font-size: 14px;
+        font-weight: 600;
+        background-color: #FD6C40;
+        border-radius: 50px;
+        color:#fff;
+        text-transform: uppercase;
+        text-align: center;
+        vertical-align: middle;
+    }
+    &__image {
+        max-width: 360px;
+        &__first{
+            width: 360px;
+            height: 360px;
+            position: relative;
+            top: 0;
+            z-index: 100;
+            &:hover{
+                z-index: 1;
+                opacity: 0;
+            }
+        }
+        &__second{
+            width: 360px;
+            height: 360px;
+            position: relative;
+            top: -365px;
+            z-index: 1;
+            opacity: 0;
+            &:hover{
+                opacity: 1;
+                z-index: 100;
+            }
+        }
+    }
+    .info {
+        position: relative;
+        top: -360px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+        max-width: 360px;
+        &__title {
+            font-size: 28px;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+        &__text {
+            font-size: 16px;
+            font-weight: 400;
+            margin-bottom: 10px;
+        }
+        &__price{
+            font-size: 28px;
+            font-weight: 500;
+            color: #FD6C40;
+            margin-bottom: 25px;
+        }
+        &__btn {
+            width: 320px;
+            text-transform: uppercase;
+            font-weight: 500;
+            font-size: 14px;
+            padding: 15px 0;
+            background-color: #fff;
+            border: 1px solid #000;
+            letter-spacing: -0.5px;
+            cursor: pointer;
+            transition: all 0.5s;
+            &:hover{
+                color:#FD6C40;
+                border:1px solid #FD6C40;
+            }
+        }
+    }
+}
